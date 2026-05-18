@@ -122,24 +122,17 @@ a {
     height: 250px;
 }
 
-.slogan-gallery img:first-child{
-    border-radius: 0 80px 0 80px;
-}
 
-.slogan-gallery img:nth-child(4){
-    border-radius: 80px 0 80px 0;
-}
-.slogan-gallery img:nth-child(2){
+
+.slogan-gallery img:nth-child(even){
     border-radius: 80px 0 80px 0;
 }
 
-.slogan-gallery img:nth-child(3){
+
+.slogan-gallery img:nth-child(odd){
     border-radius: 0 80px 0 80px;
 }
 
-.slogan-gallery img:last-child{
-    border-radius: 0 80px 0 80px;
-}
 
 .stat{
     margin-top: 72px;

@@ -12,6 +12,24 @@ body{
 
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+
+  height: 64px;
+  padding: 0 28px;
+  background: #931f0d;
+
+  color: white;
+  border-radius: 0 0 22px 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+
 .img{
     max-width: 100%;
     display: block;
@@ -68,4 +86,28 @@ a {
 
     gap : 20px;
     font-size: 5px;
+}
+
+.slogan{
+    padding-top: 56px;
+}
+
+.slogan-content{
+    text-align:center
+}
+
+.slogan h1{
+    margin: 0;
+    font-size: 56px;
+    line-height: 1.08;
+    letter-spacing: -1px;
+}
+.slogan p{
+    margin: 24px 0 28px;
+    font-size:16px;
+    line-height: 1.7;
+    color: #525151;
+}
+.hero-gallery{
+
 }

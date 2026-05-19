@@ -12,7 +12,8 @@ body{
 
 }
 
-.btn {
+/* Button are the same within the project so specificly define the styles */
+.btn { 
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +24,7 @@ body{
   background: #931f0d;
 
   color: white;
-  border-radius: 0 0 22px 22px;
+  border-radius: 0 22px 0 22px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 15px;
   text-transform: uppercase;
@@ -43,6 +44,7 @@ body{
     align-items: center;
 }
 
+/* Links are the same within the project so specifically define the styles */
 a {
     text-decoration: none;
     color: black;
@@ -88,6 +90,8 @@ a {
     font-size: 5px;
 }
 
+/* Slogan Section Styles */
+
 .slogan{
     padding-top: 56px;
 }
@@ -122,7 +126,7 @@ a {
     height: 250px;
 }
 
-
+/* Border Styles */
 
 .slogan-gallery img:nth-child(even){
     border-radius: 80px 0 80px 0;
@@ -133,13 +137,14 @@ a {
     border-radius: 0 80px 0 80px;
 }
 
-
+/* Stats Section Styles */
 .stat{
     margin-top: 72px;
     padding: 40px 0;
 
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    /* repeat 4 columns with equal width */
+    grid-template-columns: repeat(4,1fr); 
 
     border-top: 1px solid rgb(137, 135, 135);
     border-bottom: 1px solid rgb(137, 135, 135);
@@ -166,4 +171,404 @@ a {
 .stat-item p{
     font-size: 16px;
     margin: 0;
+}
+
+/* Products Section Styles */
+
+.section-heading{
+    margin-top: 72px;
+    text-align: center;  
+}
+
+.section-heading p{
+    font-size: 28px;
+    font-weight: 200;
+    color: rgb(169, 166, 166);
+
+}
+
+.section-heading h2{
+    text-align: center;
+    margin: 12px 0 0;
+    font-size: 40px;
+    color: #030303;
+}
+.products {
+  padding: 72px 0;
+}
+
+/* Style the background at Tabs Navigation */
+.tabs {
+  width: 440px;
+  height: 56px;
+  margin: 56px auto 36px;
+  padding: 6px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+
+  background: #f4f3f3;
+  border-radius: 20px;
+}
+
+.tabs button {
+  border: none;
+  background: none;
+  border-radius: 16px;
+
+  font-size: 15px;
+  color: #555;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: white;
+  color: #333;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+  /* For image not getting stretched within the product card */
+  object-fit: cover; 
+  border-radius: 0 28px 0 28px;
+}
+
+.product-card h3 {
+  margin: 18px 0 8px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.rating {
+  /* Display item based on the axis */
+  display: flex;
+  /* Align items vertically in the center ( based on the flex container ) */
+  align-items: center;
+  gap: 6px;
+
+  margin-bottom: 12px;
+}
+
+.rating span {
+  color: #d89b00;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rating small {
+  color: #888;
+}
+
+.product-card p {
+  color: #666;
+  font-size: 13px;
+}
+
+.product-bottom {
+  margin-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-bottom strong {
+  font-size: 16px;
+}
+
+.product-bottom button {
+  width: 58px;
+  height: 26px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #8b1d0c;
+  color: white;
+
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* About Section Styles */
+
+.about {
+  padding: 72px 0;
+
+  border-top: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.about-content {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  align-items: center;
+}
+
+.about-text p {
+  margin: 0 0 24px;
+
+  line-height: 1.6;
+  color: #444;
+  font-size: 15px;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  align-items: center;
+}
+
+.about-images img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.about-images img:last-child {
+  border-radius: 90px 0 90px 0;
+ 
+}
+
+.about-images img:first-child {
+  border-radius: 0 90px 0 90px;
+  margin-top: 80px;
+}
+
+/* Testimonials Section Styles */
+
+.testimonials {
+  padding: 72px 0;
+}
+
+.testimonial-grid {
+  margin-top: 72px;
+
+  display: grid;
+  /* 3 columns */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 80px;
+}
+f
+.user {
+  gap: 16px;
+}
+
+.user img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.user h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.user span {
+  color: #d89b00;
+  font-size: 14px;
+}
+
+.testimonial-card p {
+  margin-top: 18px;
+
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Blog Section Styles */
+.blog {
+  /*Make a solid top border */
+  border-top: 1px solid #6c6c6c;
+}
+
+.blog-grid {
+  margin-top: 56px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.blog-card {
+  border: 1px solid #d8d8d8;
+  border-radius: 0 42px 0 0;
+  background: white;
+  border: rgb(210, 210, 210) solid 1px;
+}
+
+.blog-card img {
+  width: 90%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+  border-radius: 0 42px 0 42px;
+
+}
+
+.blog-meta {
+  padding: 16px 16px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 12px;
+  color: #333;
+}
+
+.blog-card h3 {
+  margin: 12px 16px 18px;
+
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.blog-card a {
+  display: block;
+  margin: 0 16px 18px;
+
+  text-align: right;
+  font-size: 12px;
+  color: #555;
+}
+
+.blog-action {
+  margin-top: 48px;
+  text-align: center;
+}
+/* Increase the gap between the button text and the arrow image */
+.blog-action .btn {
+  gap: 10px;
+}
+
+/* Footer Styles */
+.footer {
+  background: #262837;
+  color: white;
+  padding: 48px 0;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr 1fr 1fr;
+  gap: 56px;
+  margin-bottom: 0;
+
+}
+
+.footer-brand p {
+  max-width: 280px;
+  margin: 20px 0 0;
+
+  color: #d4d4d4;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-column{
+  line-height: 1.6;
+  margin-bottom: 0px;
+}
+.footer-column h3,
+.subscribe h3 {
+  margin: 0 0 18px;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer-column a {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #d4d4d4;
+  font-size: 13px;
+}
+
+.social-list {
+  display: flex;
+  gap: 12px;
+}
+
+.social-list a {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+
+
+  background: #3b3d4c;
+  color: white;
+  font-size: 12px;
+}
+
+.subscribe {
+  grid-column: 2 / 4;
+  margin-top: 0px;
+}
+
+.subscribe-form {
+  display: flex;
+  width: 100%;
+  max-width: 520px;
+  height: 44px;
+}
+
+.subscribe-form input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+  padding: 0 16px;
+
+  background: #3b3d4c;
+  color: white;
+  border-radius: 6px 0 0 6px;
+}
+
+.subscribe-form input::placeholder {
+  color: #b8b8b8;
+}
+
+.subscribe-form button {
+  width: 110px;
+
+  border: none;
+  background: #8b1d0c;
+  color: white;
+  border-radius: 0 6px 6px 0;
+
+  cursor: pointer;
 }

@@ -4,23 +4,82 @@
     <title>Ngopi Coffee</title>
     <meta charset ='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./layout1.css">
+    <link rel="stylesheet" href="./layout1_tooltip.css">
 </head>
 <body>
   <!-- Header and Navigation -->
-    <header class="header">
-        <nav class = 'navbar container'>
-        <img src='./img/logo.png' class='logo'>
-        <ul class = 'nav-menu' >
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Testimmonial</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="nav-icons">
-            <img src='./img/search-icon.png' class='search-logo'>
-            <img src='./img/cart-icon.png' class='payment-logo'>
-        </div>
+    <header class="header header--fixed">
+        <nav class='navbar container' aria-label="Main navigation">
+          <img src='./img/logo.png' class='logo' alt="Ngopi logo">
+          <!-- Hamburger Menu -->
+
+
+          <ul class='nav-menu desktop-nav' id="primary-navigation">
+              <li class="nav-item nav-item--dropdown">
+                <button
+                  type="button"
+                  class="dropdown-trigger"
+                  aria-haspopup="true"
+                  aria-controls="products-dropdown-menu"
+                >
+                  Products
+                </button>
+                <ul class="dropdown-menu" id="products-dropdown-menu" role="menu" aria-label="Products submenu">
+                  <li role="none"><a href="#" role="menuitem">Latte</a></li>
+                  <li role="none"><a href="#" role="menuitem">Robusta</a></li>
+                  <li role="none"><a href="#" role="menuitem">Arabica</a></li>
+                  <li role="none"><a href="#" role="menuitem">Chocolate Coffee</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Testimmonial</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+          
+          
+          <div class="nav-icons">
+              <div class="tooltip" >
+                <img src='./img/search-icon.png' class='search-logo' aria-label="Search"  >
+                <span class="tooltiptext" role="tooltip">Search</span>
+              </div>
+ 
+              <img src='./img/cart-icon.png' class='payment-logo' >
+
+              
+              <input 
+                type="checkbox"
+                id="mobile-nav-toggle"
+                class="nav-toggle"
+                aria-label="Toggle navigation menu"
+                aria-controls="primary-navigation"
+              />
+              <label class="hamburger" for="mobile-nav-toggle" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+              <ul class='nav-menu mobile-nav' id="primary-navigation">
+              <li class="nav-item nav-item--dropdown">
+                <button
+                  type="button"
+                  class="dropdown-trigger"
+                  aria-haspopup="true"
+                  aria-controls="products-dropdown-menu"
+                >
+                  Products
+                </button>
+                <ul class="dropdown-menu" id="products-dropdown-menu" role="menu" aria-label="Products submenu">
+                  <li role="none"><a href="#" role="menuitem">Latte</a></li>
+                  <li role="none"><a href="#" role="menuitem">Robusta</a></li>
+                  <li role="none"><a href="#" role="menuitem">Arabica</a></li>
+                  <li role="none"><a href="#" role="menuitem">Chocolate Coffee</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Testimmonial</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+          </div>
         </nav>
     </header>
 
@@ -35,7 +94,7 @@
                 Discover tranquility at Ngopi a sanctuary for unwinding,
 where your evenings are perfected with relaxation and rich flavors.
             </p>
-            <a href="#" class="btn">EXPLORE PRODUCT  <img src="./img/arrrow-down.png" width="30px"></a>
+            <button href="#" class="btn btn--animated">EXPLORE PRODUCT  <img src="./img/arrrow-down.png" width="30px"></button>
         </div>
         <div class="slogan-gallery">
             <img src="./img/coffee.jpg" alt="Coffee">
@@ -46,31 +105,44 @@ where your evenings are perfected with relaxation and rich flavors.
         </div>
     </section>
 
+    <div class="divider"></div>
+
   <!-- Stats Section -->
-    <section class="stat container"> 
-        <div class="stat-item">
-            <h2>30+</h2>
-            <p>Coffee Variant</p>
-        </div>
-        <div class="stat-item">
-            <h2>20+</h2>
-            <p>Meeting room</p>
-        </div>
-        <div class="stat-item">
-            <h2>25+</h2>
-            <p>Event space</p>
-        </div>
-        <div class="stat-item">
-            <h2>40+</h2>
-            <p>Global Achievement</p>
-        </div>
+    <section class="stat container">
+      <div class="stat-item">
+        <p class="stat-value">30+</p>
+        <p class="stat-label">Coffee Variant</p>
+      </div>
+
+      <div class="stat-divider"></div>
+
+      <div class="stat-item">
+        <p class="stat-value">20+</p>
+        <p class="stat-label">Meeting room</p>
+      </div>
+
+      <div class="stat-divider"></div>
+
+      <div class="stat-item">
+        <p class="stat-value">25+</p>
+        <p class="stat-label">Event space</p>
+      </div>
+
+      <div class="stat-divider"></div>
+
+      <div class="stat-item">
+        <p class="stat-value">40+</p>
+        <p class="stat-label">Global Achievement</p>
+      </div>
     </section>
+
+    <div class="divider"></div>
     
 <!-- Products Section -->
     <section class="products container">
-      <div class="section-heading">
-        <p>Our products</p>
-        <h2>From Top Quality Materials</h2>
+      <div class="section-heading-products">
+        <p class="products-label">Our products</p>
+        <p class="products-value">From Top Quality Materials</p>
       </div>
 
     <!-- Tabs Navigation -->
@@ -85,15 +157,18 @@ where your evenings are perfected with relaxation and rich flavors.
 
         <article class="product-card">
           <img src="./img/products1.jpg" alt="Chocolate Latte" />
+          <div class="product-card-body">
+            <p>Chocolate Latte</p>
 
-          <h3>Chocolate Latte</h3>
-
-          <div class="rating">
-            <span>★ 4.9</span>
-            <small>(360 reviews)</small>
-          </div>
+            <div class="rating">
+              <span tabindex="0" role="img" aria-label="Customer rating" data-tooltip="Average customer rating" data-tooltip-pos="bottom">★</span>
+              <span>4.9</span>
+              <small>(360 reviews)</small>
+            </div>
 
           <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla.</p>
+          </div>
+          
 
           <div class="product-bottom">
             <strong>$2.9</strong>
@@ -104,16 +179,17 @@ where your evenings are perfected with relaxation and rich flavors.
        
         <article class="product-card">
           <img src="./img/products2.jpg" alt="Mocha Latte" />
-
-          <h3>Mocha Latte</h3>
+            <div class="product-card-body">
+          <p>Mocha Latte</p>
 
           <div class="rating">
-            <span>★ 5.0</span>
+            <span tabindex="0" role="img" aria-label="Customer rating" data-tooltip="Average customer rating" data-tooltip-pos="bottom">★</span>
+            <span>5.0</span>
             <small>(180 reviews)</small>
           </div>
 
           <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla.</p>
-
+          </div>
           <div class="product-bottom">
             <strong>$2.7</strong>
             <button>+</button>
@@ -124,15 +200,17 @@ where your evenings are perfected with relaxation and rich flavors.
         <article class="product-card">
           <img src="./img/products3.jpg" alt="Coffee Latte" />
 
-          <h3>Coffee Latte</h3>
+          <div class="product-card-body">
+            <p>Coffee Latte</p>
 
           <div class="rating">
-            <span>★ 4.8</span>
+            <span tabindex="0" role="img" aria-label="Customer rating" data-tooltip="Average customer rating" data-tooltip-pos="bottom">★</span>
+            <span>4.8</span>
             <small>(450 reviews)</small>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla.</p>
-
+            <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla.</p>
+          </div>
           <div class="product-bottom">
             <strong>$2.9</strong>
             <button>+</button>
@@ -142,16 +220,17 @@ where your evenings are perfected with relaxation and rich flavors.
         
         <article class="product-card">
           <img src="./img/products4.jpg" alt="Hazelnut Latte" />
-
-          <h3>Hazelnut Latte</h3>
+          <div class="product-card-body">
+          <p>Hazelnut Latte</p>
 
           <div class="rating">
-            <span>★ 4.9</span>
+            <span tabindex="0" role="img" aria-label="Customer rating" data-tooltip="Average customer rating" data-tooltip-pos="bottom">★</span>
+            <span>4.9</span>
             <small>(390 reviews)</small>
           </div>
 
           <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla.</p>
-
+          </div>
           <div class="product-bottom">
             <strong>$2.8</strong>
             <button>+</button>
@@ -167,7 +246,7 @@ where your evenings are perfected with relaxation and rich flavors.
 
       <div class="section-heading">
         <p>About us</p>
-        <h2>Why we are the best</h2>
+        <p>Why we are the best</p>
       </div>
 
       <div class="about-content">
@@ -184,9 +263,9 @@ where your evenings are perfected with relaxation and rich flavors.
 
           <p>
            Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.
-          </p>
+          </p>     
 
-          <a href="#" class="btn">Read More<img src="./img/arrrow-down.png" alt="Arrow down" width="30" /></a>
+          <button href="#" border="None" class="btn btn--animated">Read More<img src="./img/arrrow-down.png" alt="Arrow down" width/></button>
         </div>
 
       
@@ -203,7 +282,7 @@ where your evenings are perfected with relaxation and rich flavors.
 
       <div class="section-heading">
         <p>Testimonial</p>
-        <h2>What our buyers say</h2>
+        <p>What our buyers say</p>
       </div>
 
       <div class="testimonial-grid">
@@ -212,8 +291,8 @@ where your evenings are perfected with relaxation and rich flavors.
         <article class="testimonial-card">
           <div class="user">
             <img src="./img/user1.jpg" alt="Michael Wong" />
-            <div>
-              <h3>Michael Wong</h3>
+            <div class="user-info">
+              <p>Michael Wong</p>
               <span>★★★★★</span>
             </div>
           </div>
@@ -225,8 +304,8 @@ where your evenings are perfected with relaxation and rich flavors.
         <article class="testimonial-card">
           <div class="user">
             <img src="./img/user2.jpg" alt="Avril Song" />
-            <div>
-              <h3>Avril Song</h3>
+            <div class="user-info">
+              <p>Avril Song</p>
               <span>★★★★☆</span>
             </div>
           </div>
@@ -238,8 +317,8 @@ where your evenings are perfected with relaxation and rich flavors.
         <article class="testimonial-card">
           <div class="user">
             <img src="./img/user3.jpg" alt="Jeanne Wood" />
-            <div>
-              <h3>Jeanne Wood</h3>
+            <div class="user-info">
+              <p>Jeanne Wood</p>
               <span>★★★★☆</span>
             </div>
           </div>
@@ -254,7 +333,7 @@ where your evenings are perfected with relaxation and rich flavors.
 <section class="blog container">
   <div class="section-heading">
     <p>Blog</p>
-    <h2>Read our articles</h2>
+    <p>Read our articles</p>
   </div>
 
   <div class="blog-grid">
@@ -262,44 +341,49 @@ where your evenings are perfected with relaxation and rich flavors.
       <img src="./img/blog1.jpg" alt="Coffee shop interior" />
 
       <div class="blog-meta">
-        <span> John Doe</span>
-        <span> Feb 23, 2024</span>
+        <span><img src="./img/user-icon.png" alt="Author" /> John Doe</span>
+        <span><img src="./img/calendar-icon.png" alt="Calendar"  /> Feb 23, 2024</span>
       </div>
+      <p>Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</p>
 
-      <h3>Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
-
-      <a href="#">View details</a>
+      <a href="#" data-tooltip="Read full article" aria-label="View article details">
+  View details <span aria-hidden="true">›</span>
+</a>
     </article>
 
     <article class="blog-card">
       <img src="./img/blog2.jpg" alt="Coffee shop decoration" />
 
       <div class="blog-meta">
-        <span>John Doe</span>
-        <span>Feb 23, 2024</span>
+        <span><img src="./img/user-icon.png" alt="Author" /> John Doe</span>
+        <span><img src="./img/calendar-icon.png" alt="Calendar" /> Feb 23, 2024</span>
       </div>
 
-      <h3>Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
+      <p>Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</p>
 
-      <a href="#">View details</a>
+      <a href="#" data-tooltip="Read full article" aria-label="View article details">
+  View details <span aria-hidden="true">›</span>
+</a>
     </article>
 
     <article class="blog-card">
       <img src="./img/blog3.jpg" alt="Coffee brewing tools" />
 
       <div class="blog-meta">
-        <span>John Doe</span>
-        <span>Feb 23, 2024</span>
+        <span><img src="./img/user-icon.png" alt="Author" /> John Doe</span>
+        <span><img src="./img/calendar-icon.png" alt="Calendar"  /> Feb 23, 2024</span>
       </div>
 
-      <h3>Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
+      <p>Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</p>
 
-      <a href="#">View details</a>
+      <a href="#" data-tooltip="Read full article" aria-label="View article details">
+  View details <span aria-hidden="true">›</span>
+</a>
     </article>
   </div>
 
   <div class="blog-action" >
-    <a href="#" class="btn" >Read More<img src="./img/arrrow-down.png" width="30"></a>
+    <button href="#" class="btn btn--animated" >Read More<img src="./img/arrrow-down.png" width="30"></button>
   </div>
 </section>
 
@@ -307,52 +391,56 @@ where your evenings are perfected with relaxation and rich flavors.
 <footer class="footer">
   <div class="footer-inner container">
     <div class="footer-brand">
-      <div class="footer-logo" ><img src="./img/logo-white.png" alt="Ngopi Logo" width="30" />Ngopi</div>
+      <div class="footer-logo"><img src="./img/logo-white.png" alt="Ngopi Logo" width="30" />Ngopi</div>
 
       <p>
-       Discover tranquility at Ngopi a sanctuary for unwinding, where your evenings are perfected with relaxation and rich flavors.
+        Discover tranquility at Ngopi a sanctuary for unwinding, where your evenings are perfected with relaxation and rich flavors.
       </p>
 
-      <p>
+      <p class="contact">
         hello@ngopi.com<br />
         Phone: +10 23456789
       </p>
     </div>
 
-    <div class="footer-column">
-      <h3>Quick Links</h3>
-      <a href="#">Services</a>
-      <a href="#">Portfolio</a>
-      <a href="#">About us</a>
-      <a href="#">Testimonial</a>
-    </div>
+    <div class="footer-content">
+      <div class="footer-top-grid">
+        <div class="footer-column">
+          <p>Quick Links</p>
+          <a href="#">Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">About us</a>
+          <a href="#">Testimonial</a>
+        </div>
 
-    <div class="footer-column">
-      <h3>Resources</h3>
-      <a href="#">Support</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-    </div>
+        <div class="footer-column">
+          <p>Resources</p>
+          <a href="#">Support</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
 
-    <div class="footer-column">
-      <h3>Social Media</h3>
+        <div class="footer-column footer-social">
+          <p>Social Media</p>
 
-      <div class="social-list">
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
+          <div class="social-list">
+            <a href="#" ><span class="social-icon"><img src="./img/facebook.png" alt="Facebook" height="12" /></span></a>
+            <a href="#" aria-label="twitter"><span class="social-icon"><img src="./img/twitter.png" alt="Twitter"  height="12"/></span></a>
+            <a href="#" aria-label="instagram"><span class="social-icon"><img src="./img/instagram.png" alt="Instagram"  height="12"/></span></a>
+            <a href="#" aria-label="linkedin"><span class="social-icon"><img src="./img/linkedin.png" alt="LinkedIn"  height="12"/></span></a>
+            <a href="#" aria-label="youtube"><span class="social-icon"><img src="./img/youtube.png" alt="YouTube"  height="12"/></span></a>
+          </div>
+        </div>
       </div>
-    </div>
-<!-- Subscribe Section -->
-    <div class="subscribe">
-      <h3>Subscribe</h3>
 
-      <form class="subscribe-form">
-        <input type="email" placeholder=" name@domain.com" />
-        <button type="submit">Send</button>
-      </form>
+      <div class="subscribe">
+        <p>Subscribe</p>
+
+        <form class="subscribe-form" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="name@domain.com" aria-label="email" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 </footer>
